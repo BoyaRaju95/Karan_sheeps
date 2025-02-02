@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Karna sheeps farm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+    <style>
+        :root {
+            --pink: deeppink;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            background-color: #f1f1f1;
+        }
+
+        /* hedersection */
+
+        .leftcontent {
+            width: 100%;
+            background-color: white;
+            position: relative;
+            box-shadow: 0px 5px 10px #756060;
+            overflow: hidden;
+        }
+
+
+        .logdesign img {
+            width: 100px;
+            position: relative;
+            left: 10%;
+            /* filter: drop-shadow(2px 3px 5px #f1f1f1); */
+            filter: drop-shadow(-10px 5px 6px #312727)
+        }
+
+        .inlinebla {
+            display: inline-block;
+            position: relative;
+            left: 9%;
+            bottom: 20px;
+            font-family: cursive;
+            color: deeppink;
+
+        }
+
+        .inlinebla::before {
+            content: " ";
+            position: absolute;
+            top: 45px;
+            min-width: 100%;
+            height: 5px;
+            background-image: linear-gradient(90deg, red, green, orange);
+            border-radius: 3px;
+            box-shadow: 1px 1px 3px blue, 2px 3px 5px red, 3px 4px 6px green;
+        }
+
+
+        /* navigation section */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .navigation {
+            margin-top: 25px;
+            width: 100%;
+            height: 50px;
+            background-color: white;
+        }
+
+        .navigation:hover {
+            box-shadow: 2px 3px 5px #383030;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 10px;
+            float: left;
+
+        }
+
+        ul li {
+            display: inline-block;
+            margin-top: 7px;
+            position: relative;
+        }
+
+        ul li::before {
+            /* display: none; */
+            content: " ";
+            position: absolute;
+            top: 17px;
+            left: 16px;
+            width: 0%;
+            height: 2px;
+            background-image: linear-gradient(140deg, #f71212, #494a18, #07cd60);
+            border-radius: 4px;
+            box-shadow: 1px 1px 3px blue, 2px 3px 5px red, 3px 4px 6px green;
+            transition: 1s;
+
+
+        }
+
+        ul li:hover::before {
+            display: block;
+            width: 60%;
+
+
+        }
+
+        ul li a {
+            text-decoration: none;
+            padding: 1em;
+            color: deeppink;
+        }
+
+
+        /* body section  css part*/
+
+
+        .bodycontent {
+            display: flex;
+            width: 90%;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card1 {
+            width: 300px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 10px 8px 8px lightslategray;
+
+
+        }
+
+        .cardheding {
+            font-size: 25px;
+            margin: 10px;
+            text-align: center;
+            text-shadow: 2px 5px 6px lightslategrey;
+            color: var(--pink);
+
+        }
+
+        .cardimg {
+            position: relative;
+            left: 10%;
+            top: 5%;
+            width: 80%;
+
+        }
+
+        .cardimg:hover {
+            border-radius: 8px;
+            box-shadow: 3px 4px 5px rgb(58, 70, 74);
+            background-color: tomato;
+        }
+
+        .cardimg img {
+            width: 100%;
+            border-radius: 2px;
+        }
+
+        .cardimg img:hover {
+            border-radius: 8px;
+        }
+
+        .cadrdescrp h3 {
+            color: #ef5ee3;
+            padding-left: 1rem;
+            font-size: 20px;
+
+        }
+
+        .cadrdescrp p {
+            color: #d20eec;
+            padding-left: 2rem;
+            font-size: 15px;
+        }
+
+        .trust {
+            text-align: center;
+            margin-top: 2rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: var(--pink);
+        }
+
+
+        .marqdata {
+            width: 80%;
+            margin-left: 10%;
+
+        }
+
+        marquee img {
+
+            padding: 30px;
+            width: 10rem;
+        }
+
+        .contactContent {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 5%;
+        }
+
+        .gainStyle h1 {
+
+            border-left: 3px solid red;
+            font-size: 20px;
+            font-family: cursive;
+
+
+        }
+
+        .contactContent img {
+            position: relative;
+            width: 50%;
+            top: 10%;
+            border-radius: 40%;
+            filter: drop-shadow(5px 8px 8px #292d31);
+
+
+        }
+
+        .contactContent1 {
+            width: 400px;
+            text-align: center;
+        }
+
+        .contactContent2 {
+            width: 500px;
+            text-align: center;
+
+        }
+
+        input,
+        textarea {
+            display: block;
+            width: 60%;
+            margin: 2rem;
+            outline: none;
+            border: none;
+            background-color: #f1f1f1;
+            border-bottom: 2px solid rgb(104, 93, 93);
+        }
+
+        input[type=button] {
+            width: 20%;
+            height: 5vh;
+            border: 1px solid goldenrod;
+            border-radius: 10px;
+            background-color: goldenrod;
+            cursor: pointer;
+
+
+        }
+
+
+        .footer_style {
+            color: white;
+            width: 100%;
+            background-color: #2a293b;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .left_footer {
+            width: 40%;
+            padding: 20px;
+
+        }
+
+        address {
+            padding: 20px;
+        }
+
+
+        .footer_right {
+            padding-top: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 60%;
+        }
+
+        .link_color {
+            color: skyblue;
+        }
+
+
+
+
+        .footer_linkd li {
+            list-style-type: none;
+            padding: 3px;
+
+
+        }
+
+        .footer_linkd li a {
+            text-decoration: none;
+            color: white;
+
+
+        }
+
+        .hiperlinkList {
+            padding-top: 20px;
+        }
+
+        .hedig_width {
+            font-size: 3vw;
+        }
+
+        .icons {
+
+            width: 50px;
+            height: 160px;
+            background-color: white;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: -5px 6px 8px lightslategrey;
+            align-items: center;
+            margin: 10px;
+            position: fixed;
+            bottom: 40%;
+            right: 0;
+
+
+        }
+
+        .icons a {
+            text-decoration: none;
+            font-size: 30px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            border-radius: 3px;
+            background-color: #dccbdc;
+            text-align: center;
+        }
+
+        .icons a:hover {
+            box-shadow: 5px 6px 8px #6a6e71;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Here is write heder part -->
+    <header>
+        <div class="leftcontent">
+            <a href="#logo" draggable="true" class="logdesign"><img src="./imgs/download (3).png" alt="coin"></a>
+            <h1 class="inlinebla">Sheeps Farming</h1>
+        </div>
+
+    </header>
+
+    <!-- navigation bar use html code -->
+    <nav>
+        <div class="navigation">
+            <ul>
+                <li><a href="#Home">Guidence</a></li>
+                <li><a href="#Home">Courses</a></li>
+                <li><a href="#Home">Meditions</a></li>
+                <li><a href="#Home">Breed's</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- body cards html code -->
+
+    <section class="bodycontent">
+        <div class="card1">
+            <div class="cardheding">
+                <h1>Nelluru judipi</h1>
+            </div>
+            <div class="cardimg">
+                <img src="./imgs/img1.jpg" alt="">
+            </div>
+            <div class="cadrdescrp">
+                <h3>Lorem</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, iste?</p>
+            </div>
+        </div>
+        <div class="card1">
+            <div class="cardheding">
+                <h1>Nelluru judipi</h1>
+            </div>
+            <div class="cardimg">
+                <img src="./imgs/img2.jpg" alt="">
+            </div>
+            <div class="cadrdescrp">
+                <h3>Lorem</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, iste?</p>
+            </div>
+        </div>
+        <div class="card1">
+            <div class="cardheding">
+                <h1>Nelluru judipi</h1>
+            </div>
+            <div class="cardimg">
+                <img src="./imgs/img3.jpg" alt="">
+            </div>
+            <div class="cadrdescrp">
+                <h3>Lorem</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, iste?</p>
+            </div>
+        </div>
+        <div class="card1">
+            <div class="cardheding">
+                <h1>Nelluru judipi</h1>
+            </div>
+            <div class="cardimg">
+                <img src="./imgs/img4.jpg" alt="">
+            </div>
+            <div class="cadrdescrp">
+                <h3>Lorem</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, iste?</p>
+            </div>
+        </div>
+        <div class="card1">
+            <div class="cardheding">
+                <h1>Nelluru judipi</h1>
+            </div>
+            <div class="cardimg">
+                <img src="./imgs/img5.jpg" alt="">
+            </div>
+            <div class="cadrdescrp">
+                <h3>Lorem</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, iste?</p>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <div>
+        <h1 class="trust">Trust By</h1>
+        <div class="marqdata">
+            <marquee behavior="" direction="" scrollamount="5">
+                <img src="./About-us/ajio.webp" alt="">
+                <img src="./About-us/apollo.png" alt="">
+                <img src="./About-us/boat.webp" alt="" style="margin-bottom: 8px;">
+                <img src="./About-us/flipkart.webp" alt="">
+                <img src="./About-us/Mamaearth-Logo.webp" alt="" style="margin-bottom: 12px;">
+                <img src="./About-us/meesho.png" alt="">
+                <img src="./About-us/nykaa.webp" alt="">
+
+            </marquee>
+        </div>
+
+    </div>
+
+    <div>
+        <h1 style="text-align: center; color: deeppink; font-family: Verdana, Geneva, Tahoma, sans-serif;">Reach Us</h1>
+    </div>
+
+    <aside class="contactContent">
+        <section class="contactContent1">
+            <div class="gainStyle">
+                <h1>
+                    Gain Leverage For Your
+                    Business With Our Organize</h1>
+            </div>
+
+            <img src="./imgs/download (2).png" alt="">
+
+        </section>
+        <section class="contactContent2">
+            <div clas="bottomLine">
+                <input type="text" placeholder="Enter your full name" onfocus="this.placeholder=''"
+                    onblur="this.placeholder='Enter your full name'" required>
+                <input type="text" placeholder="Enter your contact number" onfocus="this.placeholder=''"
+                    onblur="this.placeholder='Enter your contact number'" required>
+                <input type="email" placeholder="Enter your email" onfocus="this.placeholder=''"
+                    onblur="this.placeholder='Enter your email'" required>
+                <textarea name="" id="" placeholder="Enter your message" rows="4" cols="50"
+                    onfocus="this.placeholder=''" onblur="this.placeholder='Enter your message'" required></textarea>
+            </div>
+            <div>
+                <input type="button" value="Submit">
+            </div>
+
+        </section>
+
+
+
+    </aside>
+
+
+    <!-- footer section html -->
+
+    <footer class="footer_style">
+        <div class="left_footer">
+
+            <div>
+                <h2 class="hedig_width">karna sheeps farm</h2>
+
+            </div>
+            <div>
+                <address>
+
+                    3-38 Bc Colony Pillalapalli, <br>
+                    Brahmasamudram (M), Anantapur (D), <br>
+                    Andrapradesh (S), 515763.
+
+
+                </address>
+            </div>
+            <div>
+                <a href="mailto:braju38348@gmail.com" style="color: white;"><small>braju38348@gmail.com</small></a>
+            </div>
+
+        </div>
+        <div class="footer_right">
+            <div class="footer_linkd">
+                <div class="link_color">
+                    <h3>Quick Links</h3>
+                </div>
+                <div class="hiperlinkList">
+                    <li><a href="">Track Shipment</a></li>
+                    <li><a href="">Book a Delivery</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Flash App</a></li>
+                </div>
+            </div>
+            <div>
+                <div class="footer_linkd">
+                    <div class="link_color">
+                        <h3>Services</h3>
+                    </div>
+                    <div class="hiperlinkList">
+                        <li><a href="">Ecommerce & D2C</a></li>
+                        <li><a href="">Hyperlocal & Quick commerce</a></li>
+                        <li><a href="">SME & Personal Courier</a></li>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                <div class="footer_linkd">
+                    <div class="link_color">
+                        <h3>Partners</h3>
+                    </div>
+                    <div class="hiperlinkList">
+                        <li><a href="">Delivery Partner</a></li>
+                        <li><a href="">Client Partner</a></li>
+                        <li><a href="">Franchise Partner</a></li>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                <div class="footer_linkd">
+                    <div class="link_color">
+                        <h3>Company</h3>
+                    </div>
+                    <div class="hiperlinkList">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Blogs</a></li>
+                        <li><a href="">Innovation</a></li>
+                        <li><a href="">Social Impact</a></li>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="footer_linkd">
+                    <div class="link_color">
+                        <h3>Legal</h3>
+                    </div>
+                    <div class="hiperlinkList">
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms of Service</a></li>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="icons">
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="https://wa.me/9515538348?text= Hi Hello" target="_blank" class="fa fa-whatsapp"></a>
+        <a href="#" class="fa fa-twitter"></a>
+
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
